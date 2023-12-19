@@ -1,6 +1,6 @@
 <?php include("inc/top.php"); ?>
 
-<h3 class="text-info"><?php echo $tendm; ?></h3>
+<h3 class="text-decoration-none text-warning" style="width: 100%; display: flex; justify-content: center;"><?php echo $tendm; ?></h3>
 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 <?php 
 if($mathang != null){

@@ -6,7 +6,7 @@ include("inc/top.php");
 foreach($danhmuc as $d){ 
     $i = 0;
 ?>
-<h3><a class="text-decoration-none text-info" href="index.php?action=group&id=<?php echo $d["id"]; ?>">
+<h3><a class="text-decoration-none text-warning" style="width: 100%; display: flex; justify-content: center;" href="index.php?action=group&id=<?php echo $d["id"]; ?>">
     <?php echo $d["tendanhmuc"]; ?></a></h3>
 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 <?php 
@@ -60,7 +60,7 @@ foreach($danhmuc as $d){
         echo "<p>Danh mục hiện chưa có sản phẩm.</p>";
     else 
 ?>
-        <div class="text-end mb-2"><a class="text-warning text-decoration-none fw-bolder" href="index.php?action=group&id=<?php echo $d["id"]; ?>">Xem thêm <?php echo $d["tendanhmuc"]; ?></a></div>
+        <div class="text-end mb-2"><a class="text-danger text-decoration-none fw-bolder" href="index.php?action=group&id=<?php echo $d["id"]; ?>">------------ Xem thêm ------------</a></div>
 <?php
 } 
 ?>

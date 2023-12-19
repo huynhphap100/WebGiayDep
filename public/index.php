@@ -22,7 +22,11 @@ if (isset($_REQUEST["action"])) {
 
 switch ($action) {
     case "null":
-        $mathang = $mh->laymathang();
+        if(isset($_GET['search'])){
+            $mathang = $mh->laymathangsearch($_GET['search']);
+        } else {
+            $mathang = $mh->laymathang();
+        }
         include("main.php");
         break;
     case "group":
@@ -109,7 +113,7 @@ switch ($action) {
             // lưu thông tin khách nếu chưa có trong db (kiểm tra email có tồn tại chưa)
             // xử lý thêm...
             $kh = new KHACHHANG();
-            $khachhang_id = $kh->themkhachhang($email, $sodienthoai, $hoten);
+            $khachhang_id = $kh->themkhachhang($email, null, $sodienthoai, $hoten);
 
 
         } else {
